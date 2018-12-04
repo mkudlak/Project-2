@@ -1,0 +1,16 @@
+.preface {
+  margin: 0 auto;
+  width: 60%;
+  position: relative;
+
+  .column {
+    column-width: 400px;
+    column-gap: 2em;
+  }
+
+  .iphone {
+    position: absolute;
+    top: -770px;
+    right: -70px;
+  }
+}

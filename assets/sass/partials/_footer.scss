@@ -1,0 +1,78 @@
+footer {
+  background-color: $footer-color;
+
+  .container {
+    margin: 100px auto 0;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: "get-in stay-in";
+    grid-gap: 30px;
+
+    h5,
+    p,
+    li {
+      color: white;
+      font-size: 13px;
+      line-height: 24px;
+    }
+
+    h5 {
+      margin-bottom: 29px;
+    }
+
+    .get-in-touch {
+      grid-area: get-in;
+    }
+
+    .stay-in-touch {
+      grid-area: stay-in;
+
+      p {
+        color: #57697f;
+        margin-top: 18px;
+      }
+    }
+
+    .input-email {
+      font-size: 14px;
+      height: 58px;
+
+      border: none;
+      border-radius: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+    }
+
+    .input-submit {
+      font-size: 14px;
+
+      height: 58px;
+      color: white;
+      margin: 0;
+      background-color: $green;
+      border: none;
+      border-radius: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+    }
+
+    .footer-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+    }
+
+    li {
+      &:hover {
+        cursor: pointer;
+        font-weight: bolder;
+      }
+    }
+  }
+}

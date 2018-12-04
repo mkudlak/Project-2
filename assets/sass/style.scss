@@ -1,0 +1,332 @@
+/*Import global modules parts*/
+@import 'modules/base.scss';
+@import 'modules/mixins.scss';
+@import 'modules/reset.scss';
+@import 'modules/variables.scss';
+/*Import specific partial parts*/
+@import 'partials/hero-1.scss';
+@import 'partials/hero-2.scss';
+@import 'partials/preface.scss';
+@import 'partials/reasons.scss';
+@import 'partials/shop.scss';
+@import 'partials/strengths.scss';
+@import 'partials/tiles.scss';
+@import 'partials/footer.scss';
+
+/*Font Import*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather:700i|Open+Sans+Condensed:300|Open+Sans:300,400,700');
+
+//MAIN
+body {
+    font-family: $font-base;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 0.5fr 1fr 0.5fr 100vh 0.5fr 0.5fr 0.5fr 0.1fr;
+    grid-template-areas: "hero-1"
+        "preface"
+        "tiles"
+        "strengths"
+        "hero-2"
+        "reasons"
+        "shop"
+        "footer"
+        "footer-main",
+}
+
+.padding {
+    padding: 100px 0;
+}
+
+.hero-1 {
+    grid-area: hero-1;
+}
+
+.preface {
+    grid-area: preface;
+}
+
+.heading-section {
+    font-size: 35px;
+    line-height: 24px;
+    font-weight: 300;
+    color: $text-heading-color;
+    margin-bottom: 30px;
+}
+
+.paragraph-section {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $text-section-color;
+}
+
+.across {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    grid-area: across;
+    text-transform: uppercase;
+    text-align: right;
+    margin: auto 0;
+    margin-left: 50px;
+    font-weight: 100;
+    word-spacing: 10px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+
+    span {
+        color: white;
+        font-weight: 700;
+    }
+}
+
+.tiles {
+    grid-area: tiles;
+}
+
+.strengths {
+    grid-area: strengths;
+}
+
+.hero-2 {
+    grid-area: hero-2;
+}
+
+.reasons {
+    grid-area: reasons;
+}
+
+.shop {
+    grid-area: shop;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.footer-main {
+    padding: 20px;
+    grid-area: footer-main;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: $footer-color;
+
+    p {
+        color: $green;
+        margin: 0 auto;
+        letter-spacing: 3px;
+
+        a {
+            font-weight: bolder;
+            color: $text-shop-color;
+            letter-spacing: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+
+
+/*MEDIA QUERIES*/
+/* Small devices, phones less than 767px) */
+@media (max-width: 767px) {
+    .hero-1 > .heading {
+        width: 100%;
+    }
+
+    .preface {
+        height: auto;
+
+        .iphone {
+            visibility: hidden;
+        }
+    }
+
+    .tiles {
+        display: block;
+
+        .tile {
+            text-align: center;
+
+            button {
+                margin-top: 30px;
+                position: relative;
+            }
+        }
+    }
+
+    .strengths {
+        display: block;
+
+        .col,
+        h1 {
+            text-align: center;
+        }
+    }
+
+    .hero-2 {
+        .container {
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .hero-2-heading {
+                background-color: hsla(120, 14%, 28%, 0.6);
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    .reasons {
+        margin: auto;
+
+        .container {
+            display: block;
+
+            .col {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .shop {
+        margin: auto;
+
+        .container {
+            width: 80%;
+            display: block;
+        }
+    }
+
+    footer {
+        margin: 0;
+        height: auto;
+
+        .container {
+            width: 80%;
+            display: block;
+        }
+
+        .input-email,
+        .input-submit {
+            height: auto;
+            width: auto;
+        }
+
+        .stay-in-touch {
+            margin-top: 20px;
+        }
+
+        .footer-col {
+            margin-top: 20px;
+        }
+    }
+
+    .footer-main {
+        margin: 0;
+    }
+}
+
+/*Device, tablets */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .padding {
+        padding: 50px 0;
+    }
+    .hero-1 > .heading {
+        width: 100%;
+    }
+
+    .preface {
+        .iphone {
+            visibility: hidden;
+        }
+    }
+
+    .tiles {
+        display: block;
+
+        .tile {
+            text-align: center;
+
+            button {
+                margin-top: 30px;
+                position: relative;
+            }
+        }
+    }
+
+    .strengths {
+        display: block;
+
+        .col,
+        h1 {
+            text-align: center;
+        }
+    }
+
+    .hero-2 {
+        .container {
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .hero-2-heading {
+                background-color: hsla(120, 14%, 28%, 0.6);
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    .reasons {
+        margin: auto;
+
+        .container {
+            display: block;
+
+            .col {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .shop {
+        margin: auto;
+
+        .container {
+            width: 80%;
+        }
+    }
+
+    footer {
+        .container {
+            width: 80%;
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .preface {
+        .iphone {
+            top: -500px;
+            img {
+                height: 700px;
+            }
+        }
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {}

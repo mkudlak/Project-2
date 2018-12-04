@@ -1,0 +1,97 @@
+.shop {
+  background-color: $dark-white;
+
+  .container {
+    margin: 0 auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "box-1 box-2";
+    grid-gap: 30px;
+
+    .shop-box-1,
+    .shop-box-2 {
+      padding: 40px;
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid none;
+        background-color: white;
+
+        h5 {
+          background-color: $violet;
+        }
+      }
+
+      h5 {
+        display: inline;
+        font-size: 11px;
+        font-weight: 400;
+        color: white;
+        line-height: 22px;
+        padding: 5px 10px;
+        border: 1px solid none;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        background-color: #e1e1e1;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: 30px;
+        line-height: 40.05px;
+        color: #2e3b4e;
+        margin: 25px 0;
+      }
+
+      p {
+        color: #8297a7;
+        font-size: 14px;
+        line-height: 25.03px;
+        margin-bottom: 25px;
+      }
+
+      button {
+        padding: 20px 40px;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.3px;
+        border: none;
+        background-color: $green;
+        color: white;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #3b995c;
+        }
+      }
+
+      .icons {
+
+        .fa-apple,
+        .fa-windows {
+          margin-top: 18px;
+          font-size: 30px;
+          color: #c5c5c5;
+        }
+
+        .fa-windows {
+          margin-left: 16px;
+        }
+      }
+    }
+
+    .shop-box-1 {
+      grid-area: box-1;
+    }
+
+    .shop-box-2 {
+      grid-area: box-2;
+    }
+  }
+}

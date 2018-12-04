@@ -1,0 +1,85 @@
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: ".   pink-tile  violet-tile  img-1       light-violet"
+    ".   img-2      img-2        green-tile   img-3";
+
+  .tile {
+    position: relative;
+    padding: 30px;
+
+    h4 {
+      color: white;
+      font-size: 30px;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    button {
+      border: none;
+      padding: 0;
+      font-weight: 700;
+      background-color: transparent;
+      color: white;
+      position: absolute;
+      left: 30px;
+      bottom: 30px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      i {
+        color: white;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .pink-tile {
+    grid-area: pink-tile;
+    background-color: $pink;
+  }
+
+  .violet-tile {
+    grid-area: violet-tile;
+    background-color: $dark-violet;
+  }
+
+  .img-1 {
+    grid-area: img-1;
+    background-image: url('/assets/images/originals/img-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .light-violet {
+    grid-area: light-violet;
+    background-color: $violet;
+  }
+
+  .img-2 {
+    grid-area: img-2;
+    background-image: url('/assets/images/originals/img-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .green-tile {
+    grid-area: green-tile;
+    background-color: $green;
+  }
+
+  .img-3 {
+    grid-area: img-3;
+    background-image: url('/assets/images/originals/img-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

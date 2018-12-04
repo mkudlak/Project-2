@@ -1,0 +1,47 @@
+.reasons {
+  background-color: $green;
+
+  .container {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: " hd      hd      hd    "
+      "  col-1   col-2  col-3     ";
+    grid-gap: 30px;
+
+    h1,
+    h6,
+    p {
+      color: white;
+    }
+
+    h6 {
+      font-size: 13px;
+      line-height: 24px;
+      font-weight: 400;
+      margin-bottom: 28px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .reasons-heading {
+      grid-area: hd;
+    }
+
+    .col-1 {
+      grid-area: col-1;
+    }
+
+    .col-2 {
+      grid-area: col-2;
+    }
+
+    .col-3 {
+      grid-area: col-3;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.strengths {
+  margin: 0 auto;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "hd     hd      hd      hd "
+    "col-1  col-2   col-3   col-4";
+  grid-gap: 15px;
+
+  .heading-section {
+    grid-area: hd;
+  }
+
+  .col {
+    h6 {
+      font-size: 13px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #67676d;
+      margin-bottom: 28px;
+    }
+  }
+
+  .col-1 {
+    grid-area: col-1;
+  }
+
+  .col-2 {
+    grid-area: col-2;
+  }
+
+  .col-3 {
+    grid-area: col-3;
+  }
+
+  .col-4 {
+    grid-area: col-4;
+  }
+}

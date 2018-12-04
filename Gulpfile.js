@@ -16,7 +16,7 @@ var gulp =          require('gulp'),
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: "http://127.0.0.1:8080/",
+        proxy: "http://127.0.0.1:5500/index.html",
         files: "**/*"
     });
 })

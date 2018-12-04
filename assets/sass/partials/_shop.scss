@@ -78,6 +78,9 @@
           margin-top: 18px;
           font-size: 30px;
           color: #c5c5c5;
+          &:hover {
+            color: $violet;
+          }
         }
 
         .fa-windows {
